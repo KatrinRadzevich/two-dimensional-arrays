@@ -36,7 +36,7 @@ double averageNumOfColum(int[,] anyArray, int colums)
     for (int rows = 0; rows < anyArray.GetLength(0); rows++)
     {
         sum += anyArray[rows, colums];
-        averageNum = sum / anyArray.GetLength(0);
+        averageNum = (sum / anyArray.GetLength(0));
     }
     return averageNum;
 }
