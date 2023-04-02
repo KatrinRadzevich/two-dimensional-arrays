@@ -15,9 +15,12 @@ string second = string.Concat(secondElement);
 string third = string.Concat(thirdElement);
 string fourth = string.Concat(fourthElement);
 // Поиск размера результирующего массива и заполнение результирующего массива
-int lengthOfResultArray = GetSizeOfFinalArray(first, second, third, fourth);
-string[] resultArray = new string[lengthOfResultArray];
-resultArray = GetResultArray(resultArray, first, second, third, fourth);
+// int lengthOfResultArray = GetSizeOfFinalArray(first, second, third, fourth);
+// string[] resultArray = new string[lengthOfResultArray];
+// resultArray = GetResultArray(resultArray, first, second, third, fourth);
+
+string[] resultArray;
+resultArray = GetResultArray(first, second, third, fourth);
 
 Console.Write("[" + String.Join(", ", array) + "] -> [" + String.Join(",  ", resultArray) + "]");
 // Метод заполнения массива от пользователя
@@ -43,20 +46,17 @@ string[] GetRightPartOfArray(string[] inArray)
     string[] someArray = inArray[mid..];
     return someArray;
 }
-// Метод на нахождение размерности результирующего массива
-int GetSizeOfFinalArray(string first, string second, string third, string fourth)
+// Метод на нахождение размерности результирующего массива и его заполнения
+string[] GetResultArray(string first, string second, string third, string fourth)
 {
     int size = 0;
     if (first.Length <= 3) size++;
     if (second.Length <= 3) size++;
     if (third.Length <= 3) size++;
     if (fourth.Length <= 3) size++;
-    return size;
-}
-
-string[] GetResultArray(string[] resultArray, string first, string second, string third, string fourth)
-{
-    for (int i = 0; i < resultArray.Length; i++)
+    string[] resultArray = new string[size];
+    int i = 0;
+    while (i < resultArray.Length)
     {
         if (first.Length <= 3)
         {
