@@ -17,8 +17,8 @@ PrintArray(array);
 Console.WriteLine();
 
 int[] rowArray = GetRowArray(array);
-// Console.WriteLine(String.Join(" ", rowArray));
-// Console.WriteLine();
+Console.WriteLine(String.Join(" ", rowArray));
+Console.WriteLine();
 
 int[] firstPartOfRowArray = GetLeftPartOfArray(rowArray);
 int[] secondPartOfRowArray = GetRightPartOfArray(rowArray);
@@ -32,10 +32,10 @@ int sum1 = GetSumRow(secondString);
 int sum2 = GetSumRow(thirdString);
 int sum3 = GetSumRow(fourthString);
 GetResult(sum0, sum1, sum2, sum3);
-// Console.WriteLine($"{String.Join(", ", firstString)}  Сумма строки = {sum0}");
-// Console.WriteLine($"{String.Join(", ", secondString)} Сумма строки = {sum1}");
-// Console.WriteLine($"{String.Join(", ", thirdString)} Сумма строки = {sum2}");
-// Console.WriteLine($"{String.Join(", ", fourthString)} Сумма строки = {sum3}");
+Console.WriteLine($"{String.Join(", ", firstString)}  Сумма строки = {sum0}");
+Console.WriteLine($"{String.Join(", ", secondString)} Сумма строки = {sum1}");
+Console.WriteLine($"{String.Join(", ", thirdString)} Сумма строки = {sum2}");
+Console.WriteLine($"{String.Join(", ", fourthString)} Сумма строки = {sum3}");
 
 void FillArray(int[,] someArray)
 {
