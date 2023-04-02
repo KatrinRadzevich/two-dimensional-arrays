@@ -15,13 +15,8 @@ string second = string.Concat(secondElement);
 string third = string.Concat(thirdElement);
 string fourth = string.Concat(fourthElement);
 // Поиск размера результирующего массива и заполнение результирующего массива
-// int lengthOfResultArray = GetSizeOfFinalArray(first, second, third, fourth);
-// string[] resultArray = new string[lengthOfResultArray];
-// resultArray = GetResultArray(resultArray, first, second, third, fourth);
-
 string[] resultArray;
 resultArray = GetResultArray(first, second, third, fourth);
-
 Console.Write("[" + String.Join(", ", array) + "] -> [" + String.Join(",  ", resultArray) + "]");
 // Метод заполнения массива от пользователя
 string[] FillArray(string[] someArray)
